@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect } from 'react'
-import { useAuth0 } from '@auth0/auth0-react'
+// import { useAuth0 } from '@auth0/auth0-react'
 import { Stack, Text, Pivot, PivotItem, IPivotStyles, PrimaryButton, DefaultButton } from '@fluentui/react'
 import fscreen from 'fscreen'
 import VideoPreview from './preview'
@@ -21,7 +21,7 @@ const pivotStyles: Partial<IPivotStyles> = {
 }
 
 const Landing: FunctionComponent = () => {
-    const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
+    // const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
     let defaultKey = 'create'
     let defaultId: string | undefined
     const path = window.location.pathname
@@ -36,7 +36,7 @@ const Landing: FunctionComponent = () => {
     }, [])
     return (
         <>
-            { isAuthenticated ? (
+            {/* { isAuthenticated ? ( */}
                 <Stack className={container} horizontalAlign="center">
                 <Stack.Item className={containerInner}>
                     <Text className={heading} variant="superLarge">
@@ -60,36 +60,35 @@ const Landing: FunctionComponent = () => {
                         </Stack.Item>
                         <Stack.Item>
                             <VideoPreview />
-                            <DefaultButton
+                            {/* <DefaultButton
                                 type="submit"
                                 text="logout"
                                 onClick={ () => { logout() }}
                                 className={ml4}
                                 styles={LeaveButtonStyles}
-                            />
+                            /> */}
                         </Stack.Item>
                     </Stack>
                 </Stack.Item>
             </Stack>
-            ) : (
-                <Stack className={container} horizontalAlign="center">
+            
+                {/* <Stack className={container} horizontalAlign="center">
                 <Stack.Item className={containerInner}>
                     <Text className={heading} variant="superLarge">
                         Welcome to videoconf
                     </Text>
                     <Stack horizontalAlign="center" horizontal wrap>
-                        {/* <Stack.Item className={mr4} grow> */}
+                        <Stack.Item className={mr4} grow>
                                 <PrimaryButton
                                     type="submit"
                                     text="Login"
                                     onClick={() => { loginWithRedirect() }}
                                 />
-                        {/* </Stack.Item> */}
+                        </Stack.Item>
                     </Stack>
                 </Stack.Item>
-            </Stack>
-            )
-            }
+            </Stack> */}
+            
         </>
     )
 }
