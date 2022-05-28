@@ -2,9 +2,9 @@
 
 # Uses
 
-- **`React`** my love.
-- **`Socketio`** for signaling and room management. I don't use `REST` and `Express` at all in this, sue me.
-- **`Fluentui`** for good-looking UI components without writing much CSS and therefore less hairfall.
+- **`React`** for frontend.
+- **`Socketio`** for signaling and room management.
+- **`Fluentui`** for UI components.
 
 `npm install` to to install react dependencies. 
 
